@@ -1,0 +1,77 @@
+<div class="container mt-5">
+    <h1 class="text-center">Giant Zoo</h1>
+
+    <form id="addTodoForm" class="my-4">
+        <div class="input-group">
+            <input type="text" id="newNamaHewan" class="form-control" placeholder="Nama Hewan" required>
+            <input type="text" id="newJumlahHewan" class="form-control" placeholder="Jumlah Hewan" required>
+            <input type="text" id="newPengurus" class="form-control" placeholder="Pengurus" required>
+            <div class="input-group-append">
+                <button type="submit" class="btn btn-primary">Tambah Data Animals</button>
+            </div>
+        </div>
+    </form>
+
+    <ul id="todoList" class="list-group">
+        <!-- Dummy Data 1 -->
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <span>
+                Gajah - 5 - John Doe
+            </span>
+            <div>
+                <button class="btn btn-sm btn-success mr-2 editBtn" data-id="1">Edit</button>
+                <button class="btn btn-sm btn-danger deleteBtn" data-id="1">Hapus</button>
+            </div>
+        </li>
+
+        <!-- Dummy Data 2 -->
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <span>
+                Singa - 3 - Jane Smith
+            </span>
+            <div>
+                <button class="btn btn-sm btn-success mr-2 editBtn" data-id="2">Edit</button>
+                <button class="btn btn-sm btn-danger deleteBtn" data-id="2">Hapus</button>
+            </div>
+        </li>
+
+        <!-- Dummy Data 3 -->
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <span>
+                Panda - 4 - Jim Brown
+            </span>
+            <div>
+                <button class="btn btn-sm btn-success mr-2 editBtn" data-id="3">Edit</button>
+                <button class="btn btn-sm btn-danger deleteBtn" data-id="3">Hapus</button>
+            </div>
+        </li>
+    </ul>
+
+    <div id="editModal" class="modal fade" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editModalLabel">Edit Hewan</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="editTodoForm">
+                        <div class="form-group">
+                            <label for="editNamaHewan">Nama Hewan</label>
+                            <input type="text" id="editNamaHewan" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="editJumlahHewan">Jumlah Hewan</label>
+                            <input type="text" id="editJumlahHewan" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="editPengurus">Pengurus</label>
+                            <input type="text" id="editPengurus" class="form-control" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary mt-3">Simpan Perubahan</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
